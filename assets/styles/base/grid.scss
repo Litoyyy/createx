@@ -1,0 +1,29 @@
+.container {
+  margin-left: 1.875rem;
+  margin-right: 1.875rem;
+  &_small {
+    margin-left: 21.5625rem;
+    margin-right: 21.5625rem;
+  }
+}
+
+.margin {
+  margin-top: 11.25rem;
+  margin-bottom: 11.25rem;
+  &_top {
+    margin-top: 11.25rem;
+  }
+  &_bottom {
+    margin-bottom: 11.25rem;
+  }
+  &_small {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+    &_top {
+      margin-top: 7.5rem;
+    }
+    &_bottom {
+      margin-bottom: 7.5rem;
+    }
+  }
+}

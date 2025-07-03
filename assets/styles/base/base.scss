@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    @include desktop {
+      font-size: .8333vw;
+    }
+    @include mobile {
+        font-size: 16px;
+    }
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: $gray-800;
+    font-family: "Lato", sans-serif;
+    // background-color: $bg-inverse;
+}
+
+main {
+    max-width: 1921px;
+    margin: 0 auto;
+    @include desktop {
+        margin: 0;
+        max-width: none;
+    }
+}
+
+hr {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+h1 {
+    @include heading_1;
+    color: $gray-900;
+}
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 100%;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: $gray-800;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+}
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    @include text_1;
+    color: $gray-800;
+    font-family: "Lato", sans-serif;
+}
+.mobile-only {
+    display: none;
+    @include mobile {
+        display: block;
+    }
+}
+.mobile-none {
+    @include mobile {
+        display: none !important;
+    }
+}

@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+@media (max-width: 1920px) {
+  html {
+    font-size: 0.8333vw;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  color: #424551;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  max-width: 1921px;
+  margin: 0 auto;
+}
+@media (max-width: 1920px) {
+  main {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+hr {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.875rem;
+  font-weight: 900;
+  line-height: 130%;
+  color: #1E212C;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #424551;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #424551;
+  font-family: "Lato", sans-serif;
+}
+
+.mobile-only {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-none {
+    display: none !important;
+  }
+}
+
+.container {
+  margin-left: 1.875rem;
+  margin-right: 1.875rem;
+}
+.container_small {
+  margin-left: 21.5625rem;
+  margin-right: 21.5625rem;
+}
+
+.margin {
+  margin-top: 11.25rem;
+  margin-bottom: 11.25rem;
+}
+.margin_top {
+  margin-top: 11.25rem;
+}
+.margin_bottom {
+  margin-bottom: 11.25rem;
+}
+.margin_small {
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
+}
+.margin_small_top {
+  margin-top: 7.5rem;
+}
+.margin_small_bottom {
+  margin-bottom: 7.5rem;
+}
+
+/*# sourceMappingURL=main.css.map */

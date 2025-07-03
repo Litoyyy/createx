@@ -1,0 +1,68 @@
+$primary: #17696A;
+$white: #FFFFFF;
+
+$gray-900: #1E212C;
+$gray-800: #424551;
+$gray-700: #787A80;
+$gray-600: #9A9CA5;
+$gray-500: #B3B7BC;
+$gray-400: #D7DADD;
+$gray-300: #E5E8ED;
+$gray-200: #F4F5F6;
+
+$warning: #F89828;
+$danger: #FF4242;
+$success: #03CEA4;
+
+
+
+@mixin heading_0{
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 120%;
+}
+@mixin heading_1{
+    font-size: 2.875rem;
+    font-weight: 900;
+    line-height: 130%;
+}
+@mixin heading_2{
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 130%;
+}
+@mixin heading_3{
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 150%;
+}
+@mixin heading_4{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 130%;
+}
+@mixin strong_1{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 160%;
+}
+@mixin strong_2{
+    font-size: .875rem;
+    font-weight: 900;
+    line-height: 150%;
+}
+@mixin text_1{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+@mixin text_2{
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+@mixin text_3{
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 150%;
+}
