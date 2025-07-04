@@ -63,7 +63,10 @@ const props = defineProps<{
     <div class="accordion-item">
         <div class="accordion-item__header" @click="handleAccordion">
             <slot name="header"/>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" v-if="state === 'active' || state === 'opened'">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666992 7.99998C0.666992 7.63179 0.965469 7.33331 1.33366 7.33331V7.99998V8.66665C0.965469 8.66665 0.666992 8.36817 0.666992 7.99998ZM14.667 7.99998L14.6669 8.66665H1.33366V7.99998V7.33331H14.6666L14.667 7.99998ZM14.667 7.99998L14.6669 8.66665C15.0351 8.66665 15.3337 8.36817 15.3337 7.99998C15.3337 7.63179 15.0348 7.33331 14.6666 7.33331L14.667 7.99998Z" fill="#17696A"/>
+            </svg>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" v-else>
             <g clip-path="url(#clip0_14_3160)">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00033 0.666687C8.36852 0.666687 8.66699 0.965164 8.66699 1.33335V7.33335H14.667C15.0352 7.33335 15.3337 7.63183 15.3337 8.00002C15.3337 8.36821 15.0352 8.66669 14.667 8.66669H8.66699V14.6667C8.66699 15.0349 8.36852 15.3334 8.00033 15.3334C7.63213 15.3334 7.33366 15.0349 7.33366 14.6667V8.66669H1.33366C0.965469 8.66669 0.666992 8.36821 0.666992 8.00002C0.666992 7.63183 0.965469 7.33335 1.33366 7.33335H7.33366V1.33335C7.33366 0.965164 7.63213 0.666687 8.00033 0.666687Z" fill="#17696A"/>
             </g>
@@ -101,6 +104,10 @@ const props = defineProps<{
             max-height: 0;
             overflow-y: hidden;
             transition: max-height 0.3s ease;
+            color: $gray-700;
+        }
+        &__content {
+            padding-top: 1rem;
         }
     }
 </style>

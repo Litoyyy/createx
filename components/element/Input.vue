@@ -16,8 +16,16 @@
         </div>
         <label class="input-label"
             :for="id || 'input-default-id'"
-        >
-            <input :type="type || 'text'"
+        >   
+            <textarea v-if="type === 'textarea'"
+                :id="id || 'input-default-id'"
+                :placeholder="placeholder"
+                @focus="onFocus"
+                @blur="onBlur"
+                :value="newValue"
+            ></textarea>
+            <input v-else
+                :type="type || 'text'"
                 :id="id || 'input-default-id'"
                 :placeholder="placeholder"
                 @focus="onFocus"
@@ -47,11 +55,16 @@
             background-color: $white;
             border-radius: .25rem;
             cursor: text;
-            input {
+            input,
+            textarea  {
                 background-color: unset;
                 width: 100%;
+                outline: unset;
+                border: unset;
                 @include text_1;
                 color: $gray-800;
+                font-family: "Lato", sans-serif;
+                padding: 0;
                 &::placeholder {
                     color: $gray-600;
                 }

@@ -63,6 +63,9 @@
         basket.value = [...basket.value];
     };
 
+    const accordionFirstOpened = ref('');
+    const accordionSecondOpened = ref('');
+
     onMounted(()=>{
         getSalesPrice();
 
@@ -235,22 +238,18 @@
                             </div>
                         </div>
                         <div class="product-main-section__info-block__accordions">
-                            <ElementAccordion>
+                            <ElementAccordion v-model:state="accordionFirstOpened">
                                 <template #header>
                                     Delivery
                                 </template>
-                                <template>
-                                    Free standard shipping on orders over $35 before tax, plus free returns.
-                                </template>
+                                Free standard shipping on orders over $35 before tax, plus free returns.
                             </ElementAccordion>
                             <hr>
-                            <ElementAccordion>
+                            <ElementAccordion v-model:state="accordionSecondOpened">
                                 <template #header>
                                     Return
                                 </template>
-                                <template>
-                                    You have 60 days to return the item(s) using any of the following methods:
-                                </template>
+                                You have 60 days to return the item(s) using any of the following methods:
                             </ElementAccordion>
                             <hr>
                             <span>

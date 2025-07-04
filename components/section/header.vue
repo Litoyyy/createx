@@ -74,6 +74,7 @@
                     <ElementLink
                         size="small"
                         color="inverse"
+                        link="/contacts/"
                     >Contacts
                     </ElementLink>
                 </div>
@@ -268,7 +269,7 @@
                                             </template>
                                         </ElementInput>
                                         <div class="header__menu-basket__cards-list__item__info-block__price-block__price">
-                                            {{ item.price }}
+                                            ${{ item.price }}
                                         </div>
                                     </div>
                                     <div class="header__menu-basket__cards-list__item__info-block__fav-btn" @click="addInWishlist(item.id)">
