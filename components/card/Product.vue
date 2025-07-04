@@ -142,12 +142,10 @@
                         </label>
                     </div>
                     <div class="product-card__info-block__add-block__colors" v-if="!!res.colors && res.colors.length > 0">
-                        <label :for="`get-color-product-${res.id}-${item}`" 
-                            class="product-card__info-block__add-block__colors__item" 
-                            v-for="item in res.colors" 
-                            :style="`--bg-color: ${item}`">
-                            <input type="radio" :name="`get-color-product-${res.id}`" :id="`get-color-product-${res.id}-${item}`">
-                        </label>
+                        <ElementColorPicker v-for="item in res.colors" 
+                            :color="item"
+                            :id="res.id"
+                        />
                     </div>
                 </div>
                 <ElementButton
@@ -295,44 +293,6 @@
                 &__colors {
                     @include df_ac;
                     gap: .5rem;
-                    &__item {
-                        position: relative;
-                        input {
-                            width: 1.5rem;
-                            height: 1.5rem;
-                            opacity: 0;
-                            cursor: pointer;
-                        }
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            width: 1.5rem;
-                            height: 1.5rem;
-                            border: 1px solid $gray-400;
-                            border-radius: 50%;
-                            @include transition(border);
-                            cursor: pointer;
-                        }
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            top: 50%;
-                            left: .3125rem;
-                            transform: translateY(-50%);
-                            width: 1rem;
-                            height: 1rem;
-                            background-color: var(--bg-color);
-                            border-radius: 50%;
-                            cursor: pointer;
-                        }
-                        &:has(input:checked) {
-                            &::before {
-                                border: 1px solid $primary;
-                            }
-                        }
-                    }
                 }
                 .button {
                     width: 100%;

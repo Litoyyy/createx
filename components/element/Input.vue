@@ -2,6 +2,10 @@
     const props = defineProps<{
         id?: string,
         placeholder?: string,
+        newValue?: string,
+        type?: string,
+        onFocus?: (event: FocusEvent) => void,
+        onBlur?: (event: FocusEvent) => void,
     }>();
 </script>
 
@@ -13,9 +17,12 @@
         <label class="input-label"
             :for="id || 'input-default-id'"
         >
-            <input type="text"
+            <input :type="type || 'text'"
                 :id="id || 'input-default-id'"
                 :placeholder="placeholder"
+                @focus="onFocus"
+                @blur="onBlur"
+                :value="newValue"
             >
             <div class="input-label__icon" v-if="$slots.icon">
                 <slot name="icon"/>
